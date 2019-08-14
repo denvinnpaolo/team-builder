@@ -5,7 +5,8 @@ const NewMemberForm = props => {
         name:"",
         email:"",
         role:"",
-        funFact:""
+        funFact:"",
+        idunno:"hello"
     });
 
     const catergoryHandler = e => {
@@ -24,14 +25,44 @@ const NewMemberForm = props => {
     };
     return(
         <form onSubmit={submitMemberForm}>
+            <label htmlFor="name">Name:</label>
             <input 
                 type="text"
                 name="name"
                 placeholder="John Doe"
                 value={member.name}
                 onChange={catergoryHandler}
+            />
+            <label htmlFor="email">email</label>
+            <textarea 
+            name="email"
+            placeholder="johndoe@example.com"
+            value={member.email}
+            onChange={catergoryHandler}
+            />
+            <label htmlFor="role">role</label>
+            <textarea 
+            name="role"
+            placeholder="CEO"
+            value={member.role}
+            onChange={catergoryHandler}
+            />
+            <label htmlFor="funFact">Fun Fact</label>
+            <textarea 
+            name="funFact"
+            placeholder="coding, swimming, etc"
+            value={member.funFact}
+            onChange={catergoryHandler}
 
             />
+            <label htmlFor="idunno">testing</label>
+            <select 
+            name="idunno" 
+            value={member.idunno} 
+            onChange={catergoryHandler}>
+                <option>barbara</option>
+                <option>hello</option>
+            </select>
         </form>
     )
 };
