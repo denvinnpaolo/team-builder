@@ -3,6 +3,7 @@ import './App.css';
 
 import teamMembers from './teamMembers';
 import TeamMemberCard from "./components/TeamMemberCard";
+import NewMemeberForm from "./components/NewMemberForm";
 
 function App() {
   const [teamMember, setTeamMember] = useState(teamMembers)
@@ -14,7 +15,9 @@ function App() {
   return (
     <div className="App">
     <h1>The Team</h1>
+    <NewMemeberForm addNewMember={addNewMember}/>
     <TeamMemberCard team={teamMember}/>
+
     </div>
   );
 }
